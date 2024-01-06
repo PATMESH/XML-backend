@@ -13,7 +13,7 @@
 					</element>
 				</sequence>
 				<attribute name="Unit" use="required" />
-			</complexType>
+			</complexType> 
 			<element name="Data" type="tns:DataType" />
 		</schema>
 	</types>
