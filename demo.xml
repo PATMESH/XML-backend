@@ -18,7 +18,7 @@
 		</schema>
 	</types>
 	<message name="GetProbabilityOfPrecipitation">
-		<part name="Latitude" type="xsd:decimal">
+		<part name="Latitude" type="xsd:decimal" >
 		</part>
 		<part name="Longitude" type="xsd:decimal">
 		</part>
