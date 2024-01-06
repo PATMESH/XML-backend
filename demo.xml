@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions targetNamespace="urn:PegaRULES:SOAP:Weather:Services" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:PegaRULES:SOAP:Weather:Services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+<definitions targetNamespace="urn:PegaRULES:SOAP:Weather:Services" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:PegaRULES:SOAP:Weather:Services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" >
 	<types>
 		<schema elementFormDefault="unqualified" targetNamespace="urn:PegaRULES:SOAP:Weather:Services" xmlns="http://www.w3.org/2001/XMLSchema">
 			<complexType name="DataType">
