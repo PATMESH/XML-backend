@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="urn:PegaRULES:SOAP:Weather:Services" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:PegaRULES:SOAP:Weather:Services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+	<types>
+		<schema elementFormDefault="unqualified" targetNamespace="urn:PegaRULES:SOAP:Weather:Services" xmlns="http://www.w3.org/2001/XMLSchema">
+			<complexType name="DataType">
+				<sequence>
+					<element maxOccurs="unbounded" minOccurs="1" name="ProbabilityOfPrecipitation">
+						<complexType>
+							<sequence />
+							<attribute name="Date" use="required" />
+							<attribute name="Value" use="required" />
+						</complexType>
+					</element>
+				</sequence>
+				<attribute name="Unit" use="required" />
+			</complexType>
+			<element name="Data" type="tns:DataType" />
+		</schema>
+	</types>
+	<message name="GetProbabilityOfPrecipitation">
+		<part name="Latitude" type="xsd:decimal">
+		</part>
+		<part name="Longitude" type="xsd:decimal">
+		</part>
+		<part name="StartDate" type="xsd:date">
+		</part>
+		<part name="EndDate" type="xsd:date">
+		</part>
+	</message>
+	<message name="GetProbabilityOfPrecipitationResponse">
+		<part name="GetProbabilityOfPrecipitationResponse" type="tns:DataType">
+		</part>
+	</message>
+	<portType name="ServicesType">
+		<operation name="GetProbabilityOfPrecipitation">
+			<input message="tns:GetProbabilityOfPrecipitation">
+			</input>
+			<output message="tns:GetProbabilityOfPrecipitationResponse">
+			</output>
+		</operation>
+	</portType>
+	<binding name="ServicesBindingSOAP" type="tns:ServicesType">
+		<binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="GetProbabilityOfPrecipitation">
+			<operation soapAction="urn:PegaRULES:SOAP:Weather:Services#GetProbabilityOfPrecipitation" style="rpc" />
+			<input>
+				<body use="literal" namespace="urn:PegaRULES:SOAP:Weather:Services" />
+			</input>
+			<output>
+				<body use="literal" namespace="urn:PegaRULES:SOAP:Weather:Services" />
+			</output>
+		</operation>
+	</binding>
+	<binding name="ServicesBindingSOAP12" type="tns:ServicesType">
+		<binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="GetProbabilityOfPrecipitation">
+			<operation soapAction="urn:PegaRULES:SOAP:Weather:Services#GetProbabilityOfPrecipitation" style="rpc" />
+			<input>
+				<body use="literal" namespace="urn:PegaRULES:SOAP:Weather:Services" />
+			</input>
+			<output>
+				<body use="literal" namespace="urn:PegaRULES:SOAP:Weather:Services" />
+			</output>
+		</operation>
+	</binding>
+	<service name="ServicesService">
+		<port name="ServicesPortSOAP" binding="tns:ServicesBindingSOAP">
+			<address location="http://10.61.8.14:9080/prweb/PRSOAPServlet/SOAP/Weather/Services" />
+		</port>
+		<port name="ServicesPortSOAP12" binding="tns:ServicesBindingSOAP12">
+			<address location="http://10.61.8.14:9080/prweb/PRSOAPServlet/SOAP/Weather/Services" />
+		</port>
+	</service>
+</definitions>
