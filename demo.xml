@@ -52,7 +52,7 @@
 		</operation>
 	</binding>
 	<binding name="ServicesBindingSOAP12" type="tns:ServicesType">
-		<binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<binding transport= "http://schemas.xmlsoap.org/soap/http" />
 		<operation name="GetProbabilityOfPrecipitation">
 			<operation soapAction="urn:PegaRULES:SOAP:Weather:Services#GetProbabilityOfPrecipitation" style="rpc" />
 			<input>
